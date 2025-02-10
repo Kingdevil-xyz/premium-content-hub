@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="monetag" content="973a724cac25a2e3b8bb21218aa4a595">
+  <title>Premium Content Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .header {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: rgba(0, 0, 0, 0.7);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .main-button {
+      display: inline-block;
+      padding: 20px 50px;
+      background: linear-gradient(45deg, #ff007f, #ff8800);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 24px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 0, 127, 0.7);
+      margin-top: 2rem;
+    }
+
+    .main-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px rgba(255, 0, 127, 0.9);
+    }
+
+    .ad-space {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px dashed rgba(255, 255, 255, 0.3);
+      border-radius: 15px;
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .ad-space:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .content-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 2rem;
+    }
+
+    .main-content {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 20px;
+    }
+
+    .ad-leaderboard {
+      height: 90px;
+      margin: 20px auto;
+    }
+
+    .ad-rectangle {
+      height: 250px;
+      width: 300px;
+      margin: 20px auto;
+    }
+
+    .ad-skyscraper {
+      height: 600px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.7);
+      border-top: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .night-mode-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .night-mode-button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .night-mode {
+      background: linear-gradient(135deg, #1e1e1e, #333);
+      color: #ddd;
+    }
+
+    .ad-space.night-mode {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="night-mode-button" onclick="toggleNightMode()">Switch to Night Mode</button>
+
+  <div class="ad-space ad-leaderboard">Advertisement (728x90)</div>
+
+  <header class="header">
+    <h1>Welcome to Premium Content Hub</h1>
+    <p>Unlock exclusive features and benefits</p>
+    <a href="https://poawooptugroo.com/4/8922394" class="main-button" target="_blank">ACCESS PREMIUM CONTENT NOW</a>
+  </header>
+
+  <div class="content-section">
+    <div class="main-content">
+      <h2>Featured Content</h2>
+      <p>Discover amazing content here...</p>
+      <div class="ad-space ad-rectangle">Advertisement (300x250)</div>
+      <h2>Latest Updates</h2>
+      <p>Stay tuned for new releases...</p>
+    </div>
+    <div class="sidebar">
+      <div class="ad-space ad-skyscraper">Advertisement (160x600)</div>
+    </div>
+  </div>
+
+  <div class="ad-space ad-leaderboard">Advertisement (728x90)</div>
+
+  <footer class="footer">
+    <p>© 2025 Premium Content Hub. All rights reserved.</p>
+    <p>Powered by Creovatestudio</p>
+  </footer>
+
+  <script>
+    function toggleNightMode() {
+      document.body.classList.toggle('night-mode');
+      const adSpaces = document.querySelectorAll('.ad-space');
+      adSpaces.forEach(ad => ad.classList.toggle('night-mode'));
+
+      const button = document.querySelector('.night-mode-button');
+      if (document.body.classList.contains('night-mode')) {
+        button.textContent = 'Switch to Day Mode';
+      } else {
+        button.textContent = 'Switch to Night Mode';
+      }
+    }
+  </script>
+
+</body>
+</html>
